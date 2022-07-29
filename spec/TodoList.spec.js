@@ -124,7 +124,26 @@ describe("TodoList", () => {
     expect(result).toEqual(expected);
   });
 
+  //5th requirement get all the todos that are completed 
 
+  it('Set a todo completed by its Id', () => {
+    const todoList = new TodoList();
+    //setup
+    const expected = [
+    {
+      id: 2,
+      text: 'turn the aircon down!',
+      status: 'complete'
+    }]
+    // execute
+    todoList.create('turn the heating on!')
+    todoList.create('turn the aircon down!')
+    todoList.create('build a bridge');
+    todoList.setCompletedById(2)
+    const result  = todoList.completedToDo()
+    //Verify
+    expect(result).toEqual(expected)
+  })
 
 
 })

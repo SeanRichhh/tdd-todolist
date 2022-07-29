@@ -39,6 +39,20 @@ class TodoList {
         }
         return incompleteItems
     }
+
+    completedToDo(){
+        const completeItems = []
+        for(let i = 0; i < this.todoList.length; i++){
+            if(this.todoList[i]['status'] === 'complete'){
+                completeItems.push(this.todoList[i])
+            }
+        }
+        return completeItems
+    }
+
+    validTodoId(){
+        
+    }
 }
 
 module.exports = TodoList
