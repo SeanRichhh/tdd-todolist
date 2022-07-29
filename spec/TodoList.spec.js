@@ -97,7 +97,32 @@ describe("TodoList", () => {
     expect(result).toEqual(expected)
   })
 
+  //4th requirement get only todo items that are incomplete
 
+  it("Incomplete items", () => {
+    // set up
+    const todoList = new TodoList();
+    const expected = [
+      {
+        id: 1,
+        text: 'turn the heating on!',
+        status: 'incomplete',
+      },
+      {
+        id: 3,
+        text: 'build a bridge',
+        status: 'incomplete',
+      },
+    ];
+    // execute
+    todoList.create("turn the heating on!");
+    todoList.create('turn the aircon down!');
+    todoList.create('build a bridge');
+    todoList.setCompletedById(2);
+    const result = todoList.incompleteToDo();
+    // verify
+    expect(result).toEqual(expected);
+  });
 
 
 

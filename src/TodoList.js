@@ -27,7 +27,18 @@ class TodoList {
         })
         return this.todoList
     }
+    
+    // Get all todo items that are incomplete
 
+    incompleteToDo(){
+        const incompleteItems = []
+        for(let i = 0; i < this.todoList.length; i++){
+            if(this.todoList[i]['status'] === 'incomplete'){
+                incompleteItems.push(this.todoList[i])
+            }
+        }
+        return incompleteItems
+    }
 }
 
 module.exports = TodoList
