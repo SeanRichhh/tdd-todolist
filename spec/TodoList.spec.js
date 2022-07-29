@@ -145,5 +145,37 @@ describe("TodoList", () => {
     expect(result).toEqual(expected)
   })
 
+  //6th requirement Search and return a todo Item by its Id or #
+  // return a error message
+
+it('search for valid ID item', () => {
+    const todoList = new TodoList();
+    //setup
+    const expected = {
+      id: 3,
+        text: 'build a bridge',
+        status: 'incomplete',
+    }
+    // execute
+    todoList.create('turn the heating on!')
+    todoList.create('turn the aircon down!')
+    todoList.create('build a bridge')
+    const result = todoList.validTodoId(3)
+    // verify
+    expect(result).toEqual(expected)
+  })
+  //second part test for requirement 6 
+  it('search for invalid ID item', () => {
+    const todoList = new TodoList();
+    //setup
+    const expected = 'ID not found'
+    // execute
+    todoList.create('turn the heating on!')
+    todoList.create('turn the aircon down!')
+    todoList.create('build a bridge')
+    const result = todoList.validTodoId(6)
+    // verify
+    expect(result).toEqual(expected)
+  })
 
 })

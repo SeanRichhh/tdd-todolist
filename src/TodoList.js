@@ -40,6 +40,7 @@ class TodoList {
         return incompleteItems
     }
 
+    // Get all todo items that are complete
     completedToDo(){
         const completeItems = []
         for(let i = 0; i < this.todoList.length; i++){
@@ -50,8 +51,16 @@ class TodoList {
         return completeItems
     }
 
-    validTodoId(){
-        
+    validTodoId(id){
+        for(let i = 0; i < this.todoList.length; i++){
+            //loop through toDoList
+            if(this.todoList[i]['id'] === id){
+            //if todoList id === id return the todolist
+                return this.todoList[i]
+            }
+        }
+        //else return the error message
+        return 'ID not found'
     }
 }
 
