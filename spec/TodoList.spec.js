@@ -73,4 +73,33 @@ describe("TodoList", () => {
     // verify
     expect(result).toEqual(expected)
   })
+
+  // 3rd requirement Set a todo completed by its Id
+
+  it('Set a todo completed by its Id', () => {
+    const todoList = new TodoList();
+    //setup
+    const expected = [{
+      id: 1,
+      text: 'turn the heating on!',
+      status: 'incomplete'
+    },
+    {
+      id: 2,
+      text: 'turn the aircon down!',
+      status: 'complete'
+    }]
+    // execute
+    todoList.create('turn the heating on!')
+    todoList.create('turn the aircon down!')
+    const result  = todoList.setCompletedById(2)
+    //Verify
+    expect(result).toEqual(expected)
+  })
+
+
+
+
+
+
 })

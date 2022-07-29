@@ -19,6 +19,15 @@ class TodoList {
     }
 
     //Set a todo completed by its ID
+    setCompletedById(id){
+        this.todoList.forEach((item) => {
+            if(item.id === id){
+                item.status = 'complete'
+            }
+        })
+        return this.todoList
+    }
+
 }
 
 module.exports = TodoList
