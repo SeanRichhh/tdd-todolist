@@ -13,7 +13,7 @@ todoList              todoList[Array]                   todoList[Array]         
                                                         inCompleteItems[ArrayToDolist]      todoItems[incompleteArray]
                                                         completedItems[ArrayToDolist]       todoItemss[completedArray]
                                                         getIDitem[ArrayToDolist]            id integer
-                                                        getbyItembyID[ArrayToDolist]            boolean False
+                                                        getbyItembyID[ArrayToDolist]         boolean False
                                                         removEIDItem[ArrayToDolist]         ----------
 
 */
