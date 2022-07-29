@@ -62,6 +62,17 @@ class TodoList {
         //else return the error message
         return 'ID not found'
     }
+
+    // Remove a todo item by its ID
+
+    removeById(id){
+        for(let i = 0; i < this.todoList.length; i++){
+            if(this.todoList[i]['id'] === id){
+                this.todoList.splice(i, 1)
+            }
+        }
+        return this.todoList
+    }
 }
 
 module.exports = TodoList

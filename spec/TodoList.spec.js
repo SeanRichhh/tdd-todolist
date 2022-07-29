@@ -177,5 +177,19 @@ it('search for valid ID item', () => {
     // verify
     expect(result).toEqual(expected)
   })
+  //Seventh test final requirement, remove by Id
+
+  it('search for invalid ID item', () => {
+    const todoList = new TodoList();
+    //setup
+    const expected = [
+
+    ]
+    // execute
+    todoList.create('turn the heating on!')
+    const result = todoList.removeById(1)
+    // verify
+    expect(result).toEqual(expected)
+  })
 
 })
